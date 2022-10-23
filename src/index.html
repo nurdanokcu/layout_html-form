@@ -22,6 +22,7 @@
             type="text"
             name="surname"
             id="surname"
+            autocomplete="off"
             required
           >
         </div>
@@ -32,6 +33,7 @@
             type="text"
             name="name"
             id="name"
+            autocomplete="off"
             required
           >
         </div>
@@ -88,7 +90,8 @@
             type="password"
             name="password"
             id="password"
-            minlength="6"
+            minlength="8"
+            maxlength="15"
             required
           >
         </div>
@@ -98,23 +101,24 @@
       <fieldset class="fieldset">
         <legend>ِAn interesting fact about you!</legend>
 
-        <div  class="form__field">Do you love cats?
-          <input
-            type="radio"
-            name="loveCats"
-            id="yes"
-            value="yes"
-          >
-          <label for="yes">Yes</label>
-
-          <input
-            type="radio"
-            name="loveCats"
-            id="no"
-            value="no"
-          >
-          <label for="no">No</label>
-
+        <div  class="form__field">
+          Do you love cats?
+          <label>
+            <input
+              type="radio"
+              name="loveCats"
+              value="yes"
+            >
+              Yes
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="loveCats"
+              value="no"
+            >
+              No
+          </label>
         </div>
 
         <div class="form__field">
@@ -132,23 +136,21 @@
             type="time"
             name="bedTime"
             id="time"
-            step="1"
           >
         </div>
 
         <div class="form__field">
-          <label for="favoriteCar">What are your favorite brand of cars?</label>
-
-          <select
-            name="favoriteCar"
-            id="favoriteCar"
-            multiple
-          >
-            <option value="bmw">BMW</option>
-            <option value="audi">Audi</option>
-            <option value="lada">Lada</option>
-          </select>
-
+          <label>What are your favorite brand of cars?
+            <select
+              name="favoriteCar"
+              size="4"
+              multiple
+            >
+              <option value="bmw">BMW</option>
+              <option value="audi">Audi</option>
+              <option value="lada">Lada</option>
+            </select>
+          </label>
         </div>
 
         <div class="form__field">
@@ -160,36 +162,34 @@
             min="0"
             max="10"
             value="0"
+            step="1"
           >
         </div>
-
       </fieldset>
 
       <fieldset class="fieldset">
         <legend>Additional info:</legend>
 
         <div class="form__field">
-          <label for="comments">Comments:</label>
-          <textarea
-            name="comments"
-            autocomplete="off"
-            maxlength="50"
-            id="comments"
-         ></textarea>
+          <label for="comments">Comments:
+            <textarea
+              name="comments"
+              id="comments"
+           ></textarea>
+          </label>
         </div>
 
         <div class="form__field">
-          <label for="recommend">Would you recommend us?</label>
-          <select
-            name="recommend"
-            id="recommend"
-            required
-          >
-            <option value="yes">yes</option>
-            <option value="no">no</option>
-          </select>
+          <label>Would you recommend us?
+            <select
+              name="recommend"
+              required
+            >
+              <option value="yes">yes</option>
+              <option value="no">no</option>
+            </select>
+          </label>
         </div>
-
       </fieldset>
 
       <button type="submit">Submit</button>
