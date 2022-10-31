@@ -3,9 +3,9 @@
 }
 
 .form__field {
-  display: block;
+  margin-bottom: 10px;
 }
 
-.form__field:not(:last-child) {
-  margin-bottom: 10px;
+.form__field:last-child {
+  margin-bottom: 0;
 }
